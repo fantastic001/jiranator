@@ -1,0 +1,11 @@
+# BEGIN: Python project
+*.pyc
+__pycache__/
+env/
+# END: Python project
+# Ignore CSV files
+*.csv
+# Ignore config.json
+config.json
+# ignore jira-config.json
+jira-config.json
