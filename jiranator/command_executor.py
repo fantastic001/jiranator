@@ -53,7 +53,7 @@ class CommandExecutor:
         Returns the description of an issue.
         """
         issue = jira_client.issue(key)
-        return issue.fields.description
+        return issue.fields.description.replace('\r\n', '\n')
     def get_summary(self, key: str):
         """
         Returns the summary of an issue.
@@ -78,4 +78,5 @@ class CommandExecutor:
         """
         issue = jira_client.issue(key)
         return issue.fields.reporter.displayName
-    
+
+
